@@ -1,19 +1,16 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.svg";
-import openbtn from "../assets/menue1.svg";
-import menueX from "../assets/menueX.svg";
+// import  openbtn from "../assets/menue1.svg";
+// import closeBtn from "../assets/menueX.svg";
+import { Menu } from "lucide-react";
+import { X } from "lucide-react";
 
 const Navbar = () => {
-  const [openbtn, setOpenbtn] = useState(false);
-
-  const [closebtn, setClosebtn] = useState("");
+  const [openBtn, setOpenbtn] = useState(false);
 
   const togglebtnopen = () => {
-    setOpenbtn(openbtn);
+    setOpenbtn(!openBtn);
   };
-
-
-
 
   return (
     <div className="sticky top-0 z-50 py-3 backdrop-blur-lg border-b border-neutral-700/80">
@@ -51,6 +48,31 @@ const Navbar = () => {
               create an account
             </a>
           </div>
+          <div
+            className="lg:hidden
+           md:flex flex-col justify-end"
+          >
+            <button onClick={togglebtnopen}>
+              {openBtn ? <X /> : <Menu />}
+            </button>
+          </div>
+        </div>
+        <div>
+          {togglebtnopen && (
+            <div className="fixed right-0 z-0 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
+              <ul className="capitalize text-2xl font-bold">
+                <li className="py-4">featurs</li>
+                <li className="py-4">workflow</li>
+                <li className="py-4">price</li>
+                <li className="py-4">testimonials</li>
+              </ul>
+              <div className="flex space-x-6">
+                <a href="#" className="py-2 px-2 border rounded-md"> sign in</a>
+                <a href="#" className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800"> create an account</a>
+                
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>
