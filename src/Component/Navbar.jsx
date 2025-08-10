@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.svg";
-// import  openbtn from "../assets/menue1.svg";
-// import closeBtn from "../assets/menueX.svg";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
 
@@ -53,12 +51,16 @@ const Navbar = () => {
            md:flex flex-col justify-end"
           >
             <button onClick={togglebtnopen}>
-              {openBtn ? <X /> : <Menu />}
+              {openBtn ? (
+                <X onClick={togglebtnopen} />
+              ) : (
+                <Menu onClick={togglebtnopen} />
+              )}
             </button>
           </div>
         </div>
         <div>
-          {togglebtnopen && (
+          {openBtn && (
             <div className="fixed right-0 z-0 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
               <ul className="capitalize text-2xl font-bold">
                 <li className="py-4">featurs</li>
@@ -67,9 +69,17 @@ const Navbar = () => {
                 <li className="py-4">testimonials</li>
               </ul>
               <div className="flex space-x-6">
-                <a href="#" className="py-2 px-2 border rounded-md"> sign in</a>
-                <a href="#" className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800"> create an account</a>
-                
+                <a href="#" className="py-2 px-2 border rounded-md">
+                  {" "}
+                  sign in
+                </a>
+                <a
+                  href="#"
+                  className="py-2 px-3 rounded-md bg-gradient-to-r from-orange-500 to-orange-800"
+                >
+                  {" "}
+                  create an account
+                </a>
               </div>
             </div>
           )}
