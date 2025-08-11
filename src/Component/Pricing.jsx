@@ -35,7 +35,7 @@ const Pricing = () => {
     },
   ];
   return (
-    <div className="mt-20">
+    <div id="price" className="mt-20">
       <h2 className="text-3xl sm:text-5xl lg:6xl text-center my-8 tracking-wider capitalize">
         pricing
       </h2>

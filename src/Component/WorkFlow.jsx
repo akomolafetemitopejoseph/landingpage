@@ -30,7 +30,7 @@ const WorkFlow = () => {
     },
   ];
   return (
-    <div className="mt-20">
+    <div id="work" className="mt-20">
       <h2 className="text-4xl sm:text-5xl lg:text-6xl text-center mt-6 tracking-wide">
         Accelerate your{" "}
         <span className="bg-gradient-to-r from-orange-500 to-orange-800 text-transparent bg-clip-text">
@@ -52,7 +52,10 @@ const WorkFlow = () => {
                 <Flower />
               </div>
               <div>
-                <h5 className="mt-1 mb-2 text-xl lg:text-2xl"> {checklist.title}</h5>
+                <h5 className="mt-1 mb-2 text-xl lg:text-2xl">
+                  {" "}
+                  {checklist.title}
+                </h5>
                 <p className="text-md lg:text-xl text-neutral-500">
                   {checklist.description}
                 </p>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/logo.svg";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [openBtn, setOpenbtn] = useState(false);
@@ -27,10 +28,18 @@ const Navbar = () => {
             </span>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12 capitalize">
-            <li>featurs</li>
-            <li>workflow</li>
-            <li>price</li>
-            <li>testimonials</li>
+            <Link to="features" smooth={true} duration={1000}>
+              <li>featurs</li>
+            </Link>
+            <Link to="work" smooth={true} duration={1000}>
+              <li>workflow</li>
+            </Link>
+            <Link to="price" smooth={true} duration={1000}>
+              <li>price</li>
+            </Link>
+            <Link to="test" smooth={true} duration={1000}>
+              <li>testimonials</li>
+            </Link>
           </ul>
           <div
             className="hidden lg:flex justify-center space-x-12 items-c
@@ -63,10 +72,18 @@ const Navbar = () => {
           {openBtn && (
             <div className="fixed right-0 z-0 bg-neutral-900 w-full p-12 flex flex-col justify-center items-center lg:hidden">
               <ul className="capitalize text-2xl font-bold">
-                <li className="py-4">featurs</li>
-                <li className="py-4">workflow</li>
-                <li className="py-4">price</li>
-                <li className="py-4">testimonials</li>
+                <Link to="features" smooth={true} duration={1000}>
+                  <li className="py-4">features</li>
+                </Link>
+                <Link to="work" smooth={true} duration={1000}>
+                  <li className="py-4">workflow</li>
+                </Link>
+                <Link to="price" smooth={true} duration={1000}>
+                  <li className="py-4">price</li>
+                </Link>
+                <Link to="test" smooth={true} duration={1000}>
+                  <li className="py-4">testimonials</li>
+                </Link>
               </ul>
               <div className="flex space-x-6">
                 <a href="#" className="py-2 px-2 border rounded-md">
