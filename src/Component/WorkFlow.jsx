@@ -38,7 +38,12 @@ const WorkFlow = () => {
         </span>
       </h2>
 
-      <div className="lg:flex justify-center items-center">
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        className="lg:flex justify-center items-center"
+      >
         <div className="p-5  lg:1/2">
           <img className="w-150" src={img1} alt="code" />
         </div>

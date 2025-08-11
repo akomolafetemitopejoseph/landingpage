@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
 import video1 from "../assets/video1.mp4";
 import video2 from "../assets/video2.mp4";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const HeroSection = () => {
+  useEffect(() => {
+    AOS.init();
+  }, {});
   return (
-    <div id="features" className="flex flex-col items-center mt-6 lg:mt-20">
+    <div
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+      id="features"
+      className="flex flex-col items-center mt-6 lg:mt-20"
+    >
       <h1 className="text-4xl sm:text-6xl lg:text-7xl text-center tracking-wide ">
         VirtualR build tools {""}
         <span className="bg-gradient-to-r from-orange-500 to-red-800 text-transparent bg-clip-text">

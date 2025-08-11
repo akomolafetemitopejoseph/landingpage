@@ -50,16 +50,27 @@ const Testimonials = () => {
       <h2 className="text-3xl sm:text-5xl lg:text-6xl text-center my-10 lg:mask-y-from-20">
         what people are saying
       </h2>
-      <div className="flex p-5 lg:gap-5 flex-wrap justify-center">
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+        className="flex p-5 lg:gap-5 flex-wrap justify-center"
+      >
         {testimonials.map((testimonials, index) => (
           <div key={index} className="w-full sm:w-1/2 lg:w-1/3 py-2">
             <div className="bg-neutral rounded-md p-6 text-md border border-neutral-800 font-thin">
               <p>{testimonials.text}</p>
               <div className="flex mt-8  items-center">
-                <img className="w-12 h-12 mr-6 rounded-full border border-neutral-300" src={testimonials.image} alt="imges" />
+                <img
+                  className="w-12 h-12 mr-6 rounded-full border border-neutral-300"
+                  src={testimonials.image}
+                  alt="imges"
+                />
                 <p>{testimonials.user}</p>
               </div>
-              <span className="text-sm font-normal italic text-neutral-600">{testimonials.company}</span>
+              <span className="text-sm font-normal italic text-neutral-600">
+                {testimonials.company}
+              </span>
             </div>
           </div>
         ))}

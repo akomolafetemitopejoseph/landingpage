@@ -24,7 +24,13 @@ const Footer = () => {
   ];
   return (
     <footer className="mt-20 border-t py-10 border-neutral-700">
-      <div className="grid grid-cols-2 lg:grid-cols-3 gap-2 p-5">
+      <div
+        data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500"
+        className="grid grid-cols-2 lg:grid-cols-3 gap-2 p-5"
+      >
         <div>
           <h3 className="text-md font-semibold mb-4 capitalize text-xl">
             resources

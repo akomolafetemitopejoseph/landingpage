@@ -6,6 +6,7 @@ import WorkFlow from "./Component/WorkFlow";
 import Pricing from "./Component/Pricing";
 import Testimonials from "./Component/Testimonials";
 import Footer from "./Component/Footer";
+import { FloatButton } from "antd";
 
 const App = () => {
   return (
@@ -17,6 +18,8 @@ const App = () => {
       <Pricing />
       <Testimonials />
       <Footer />
+      <div></div>
+      <FloatButton.BackTop />
     </div>
   );
 };

@@ -49,7 +49,13 @@ const FeaturesSection = () => {
     },
   ];
   return (
-    <div className="relative mt-20 border-b border-neutral-800 min-h-[800px]">
+    <div
+      data-aos="fade-left"
+      data-aos-anchor="#example-anchor"
+      data-aos-offset="500"
+      data-aos-duration="500"
+      className="relative mt-20 border-b border-neutral-800 min-h-[800px]"
+    >
       <div className="text-center">
         <span className="bg-neutral-900 text-orange-500 rounded-full h-6 text-sm font-medium px-2 py-1 uppercase">
           features
@@ -70,7 +76,9 @@ const FeaturesSection = () => {
                 {features.icon}
               </div>
               <div>
-                <h5 className="mt-1 mb-6 text-xl capitalize">{features.text}</h5>
+                <h5 className="mt-1 mb-6 text-xl capitalize">
+                  {features.text}
+                </h5>
                 <p className="text-md lg:text-lg p-2 mb-20 text-neutral-500">
                   {features.description}
                 </p>
